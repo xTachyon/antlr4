@@ -24,7 +24,7 @@ std::map<std::vector<std::string>, std::map<std::string, size_t>> Recognizer::_r
 
 Recognizer::Recognizer() {
   InitializeInstanceFields();
-  _proxListener.addErrorListener(&ConsoleErrorListener::INSTANCE);
+  // _proxListener.addErrorListener(&ConsoleErrorListener::INSTANCE);
 }
 
 Recognizer::~Recognizer() {

@@ -57,7 +57,7 @@ void Parser::TraceListener::exitEveryRule(ParserRuleContext *ctx) {
   //   << ", LT(1)=" << outerInstance->_input->LT(1)->getText() << std::endl;
 }
 
-Parser::TrimToSizeListener Parser::TrimToSizeListener::INSTANCE;
+// Parser::TrimToSizeListener Parser::TrimToSizeListener::INSTANCE;
 
 Parser::TrimToSizeListener::~TrimToSizeListener() {
 }
@@ -150,18 +150,19 @@ bool Parser::getBuildParseTree() {
 }
 
 void Parser::setTrimParseTree(bool trimParseTrees) {
-  if (trimParseTrees) {
-    if (getTrimParseTree()) {
-      return;
-    }
-    addParseListener(&TrimToSizeListener::INSTANCE);
-  } else {
-    removeParseListener(&TrimToSizeListener::INSTANCE);
-  }
+  // if (trimParseTrees) {
+  //   if (getTrimParseTree()) {
+  //     return;
+  //   }
+  //   addParseListener(&TrimToSizeListener::INSTANCE);
+  // } else {
+  //   removeParseListener(&TrimToSizeListener::INSTANCE);
+  // }
 }
 
 bool Parser::getTrimParseTree() {
-  return std::find(getParseListeners().begin(), getParseListeners().end(), &TrimToSizeListener::INSTANCE) != getParseListeners().end();
+  return false;
+  // return std::find(getParseListeners().begin(), getParseListeners().end(), &TrimToSizeListener::INSTANCE) != getParseListeners().end();
 }
 
 std::vector<tree::ParseTreeListener *> Parser::getParseListeners() {
