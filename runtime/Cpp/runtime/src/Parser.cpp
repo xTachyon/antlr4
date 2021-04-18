@@ -150,6 +150,7 @@ bool Parser::getBuildParseTree() {
 }
 
 void Parser::setTrimParseTree(bool trimParseTrees) {
+  std::terminate();
   // if (trimParseTrees) {
   //   if (getTrimParseTree()) {
   //     return;
@@ -161,7 +162,7 @@ void Parser::setTrimParseTree(bool trimParseTrees) {
 }
 
 bool Parser::getTrimParseTree() {
-  return false;
+  std::terminate();
   // return std::find(getParseListeners().begin(), getParseListeners().end(), &TrimToSizeListener::INSTANCE) != getParseListeners().end();
 }
 

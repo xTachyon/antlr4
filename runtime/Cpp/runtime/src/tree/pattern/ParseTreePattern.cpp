@@ -34,16 +34,17 @@ bool ParseTreePattern::matches(ParseTree *tree) {
 }
 
 std::vector<ParseTreeMatch> ParseTreePattern::findAll(ParseTree *tree, const std::string &xpath) {
-  xpath::XPath finder(_matcher->getParser(), xpath);
-  std::vector<ParseTree *> subtrees = finder.evaluate(tree);
-  std::vector<ParseTreeMatch> matches;
-  for (auto *t : subtrees) {
-    ParseTreeMatch aMatch = match(t);
-    if (aMatch.succeeded()) {
-      matches.push_back(aMatch);
-    }
-  }
-  return matches;
+  std::terminate();
+  // xpath::XPath finder(_matcher->getParser(), xpath);
+  // std::vector<ParseTree *> subtrees = finder.evaluate(tree);
+  // std::vector<ParseTreeMatch> matches;
+  // for (auto *t : subtrees) {
+  //   ParseTreeMatch aMatch = match(t);
+  //   if (aMatch.succeeded()) {
+  //     matches.push_back(aMatch);
+  //   }
+  // }
+  // return matches;
 }
 
 
