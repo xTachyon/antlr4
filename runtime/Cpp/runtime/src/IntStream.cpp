@@ -7,6 +7,6 @@
 
 using namespace antlr4;
 
-const std::string IntStream::UNKNOWN_SOURCE_NAME = "<unknown>";
+// const std::string IntStream::UNKNOWN_SOURCE_NAME = "<unknown>";
 
 IntStream::~IntStream() = default;

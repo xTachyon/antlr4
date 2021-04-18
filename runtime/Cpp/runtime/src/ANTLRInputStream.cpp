@@ -155,7 +155,7 @@ std::string ANTLRInputStream::getText(const Interval &interval) {
 
 std::string ANTLRInputStream::getSourceName() const {
   if (name.empty()) {
-    return IntStream::UNKNOWN_SOURCE_NAME;
+    return "<unknown>";
   }
   return name;
 }

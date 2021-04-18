@@ -13,8 +13,8 @@
 using namespace antlr4;
 using namespace antlr4::misc;
 
-IntervalSet const IntervalSet::COMPLETE_CHAR_SET = 
-    IntervalSet::of(Lexer::MIN_CHAR_VALUE, Lexer::MAX_CHAR_VALUE);
+// IntervalSet const IntervalSet::COMPLETE_CHAR_SET = 
+//     IntervalSet::of(Lexer::MIN_CHAR_VALUE, Lexer::MAX_CHAR_VALUE);
 
 IntervalSet const IntervalSet::EMPTY_SET;
 

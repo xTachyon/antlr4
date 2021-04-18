@@ -14,8 +14,8 @@
 using namespace antlr4::tree;
 using namespace antlrcpp;
 
-static IterativeParseTreeWalker defaultWalker;
-ParseTreeWalker &ParseTreeWalker::DEFAULT = defaultWalker;
+// static IterativeParseTreeWalker defaultWalker;
+// ParseTreeWalker &ParseTreeWalker::DEFAULT = defaultWalker;
 
 ParseTreeWalker::~ParseTreeWalker() {
 }
