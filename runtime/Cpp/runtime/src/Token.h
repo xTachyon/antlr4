@@ -24,17 +24,9 @@ namespace antlr4 {
 
     /// During lookahead operations, this "token" signifies we hit rule end ATN state
     /// and did not follow it despite needing to.
-#if __cplusplus >= 201703L
     static constexpr size_t EPSILON = std::numeric_limits<size_t>::max() - 1;
     static constexpr size_t MIN_USER_TOKEN_TYPE = 1;
     static constexpr size_t EOF = IntStream::EOF;
-#else
-    enum : size_t {
-      EPSILON = static_cast<size_t>(-2), // std::numeric_limits<size_t>::max() - 1; doesn't work in VS 2013
-      MIN_USER_TOKEN_TYPE = 1,
-      EOF = IntStream::EOF,
-    };
-#endif
 
     virtual ~Token();
 

@@ -51,7 +51,7 @@
     #endif
   #endif
 
-  #define GUID_WINDOWS
+  // #define GUID_WINDOWS
 
   #ifdef _WIN64
     typedef __int64 ssize_t;
@@ -70,6 +70,7 @@
     typedef std::u32string UTF32String;
   #endif
 
+  #define ANTLR4CPP_STATIC
   #ifdef ANTLR4CPP_EXPORTS
     #define ANTLR4CPP_PUBLIC __declspec(dllexport)
   #else
@@ -90,7 +91,7 @@
 #elif defined(__APPLE__)
   typedef std::u32string UTF32String;
 
-  #define GUID_CFUUID
+  // #define GUID_CFUUID
   #if __GNUC__ >= 4
     #define ANTLR4CPP_PUBLIC __attribute__ ((visibility ("default")))
   #else
@@ -99,7 +100,7 @@
 #else
   typedef std::u32string UTF32String;
 
-  #define GUID_LIBUUID
+  // #define GUID_LIBUUID
   #if __GNUC__ >= 6
     #define ANTLR4CPP_PUBLIC __attribute__ ((visibility ("default")))
   #else
