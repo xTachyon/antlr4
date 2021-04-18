@@ -355,7 +355,7 @@ std::unordered_map<size_t, TokenStreamRewriter::RewriteOperation*> TokenStreamRe
         rewrites[prevRop->instructionIndex] = nullptr; // kill first delete
         rop->index = std::min(prevRop->index, rop->index);
         rop->lastIndex = std::max(prevRop->lastIndex, rop->lastIndex);
-        std::cout << "new rop " << rop << std::endl;
+        // std::cout << "new rop " << rop << std::endl;
       }
       else if (!disjoint) {
         throw IllegalArgumentException("replace op boundaries of " + rop->toString() +

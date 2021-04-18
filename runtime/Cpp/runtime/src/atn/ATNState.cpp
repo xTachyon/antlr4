@@ -58,7 +58,7 @@ void ATNState::addTransition(size_t index, Transition *e) {
   if (transitions.empty()) {
     epsilonOnlyTransitions = e->isEpsilon();
   } else if (epsilonOnlyTransitions != e->isEpsilon()) {
-    std::cerr << "ATN state %d has both epsilon and non-epsilon transitions.\n" << stateNumber;
+    // std::cerr << "ATN state %d has both epsilon and non-epsilon transitions.\n" << stateNumber;
     epsilonOnlyTransitions = false;
   }
 

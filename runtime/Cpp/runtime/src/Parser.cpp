@@ -40,21 +40,21 @@ Parser::TraceListener::~TraceListener() {
 }
 
 void Parser::TraceListener::enterEveryRule(ParserRuleContext *ctx) {
-  std::cout << "enter   " << outerInstance->getRuleNames()[ctx->getRuleIndex()]
-    << ", LT(1)=" << outerInstance->_input->LT(1)->getText() << std::endl;
+  // std::cout << "enter   " << outerInstance->getRuleNames()[ctx->getRuleIndex()]
+  //   << ", LT(1)=" << outerInstance->_input->LT(1)->getText() << std::endl;
 }
 
 void Parser::TraceListener::visitTerminal(tree::TerminalNode *node) {
-  std::cout << "consume " << node->getSymbol() << " rule "
-    << outerInstance->getRuleNames()[outerInstance->getContext()->getRuleIndex()] << std::endl;
+  // std::cout << "consume " << node->getSymbol() << " rule "
+  //   << outerInstance->getRuleNames()[outerInstance->getContext()->getRuleIndex()] << std::endl;
 }
 
 void Parser::TraceListener::visitErrorNode(tree::ErrorNode * /*node*/) {
 }
 
 void Parser::TraceListener::exitEveryRule(ParserRuleContext *ctx) {
-  std::cout << "exit    " << outerInstance->getRuleNames()[ctx->getRuleIndex()]
-    << ", LT(1)=" << outerInstance->_input->LT(1)->getText() << std::endl;
+  // std::cout << "exit    " << outerInstance->getRuleNames()[ctx->getRuleIndex()]
+  //   << ", LT(1)=" << outerInstance->_input->LT(1)->getText() << std::endl;
 }
 
 Parser::TrimToSizeListener Parser::TrimToSizeListener::INSTANCE;
@@ -574,10 +574,10 @@ void Parser::dumpDFA() {
       dfa::DFA &dfa = simulator->decisionToDFA[d];
       if (!dfa.states.empty()) {
         if (seenOne) {
-          std::cout << std::endl;
+          // std::cout << std::endl;
         }
-        std::cout << "Decision " << dfa.decision << ":" << std::endl;
-        std::cout << dfa.toString(getVocabulary());
+        // std::cout << "Decision " << dfa.decision << ":" << std::endl;
+        // std::cout << dfa.toString(getVocabulary());
         seenOne = true;
       }
     }

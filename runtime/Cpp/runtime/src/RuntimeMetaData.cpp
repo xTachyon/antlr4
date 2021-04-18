@@ -27,12 +27,12 @@ void RuntimeMetaData::checkVersion(const std::string &generatingToolVersion, con
     && getMajorMinorVersion(runtimeVersion) != getMajorMinorVersion(compileTimeVersion);
 
   if (runtimeConflictsWithGeneratingTool) {
-    std::cerr << "ANTLR Tool version " << generatingToolVersion << " used for code generation does not match "
-      "the current runtime version " << runtimeVersion << std::endl;
+    // std::cerr << "ANTLR Tool version " << generatingToolVersion << " used for code generation does not match "
+    //   "the current runtime version " << runtimeVersion << std::endl;
   }
   if (runtimeConflictsWithCompileTimeTool) {
-    std::cerr << "ANTLR Runtime version " << compileTimeVersion << " used for parser compilation does not match "
-      "the current runtime version " << runtimeVersion << std::endl;
+    // std::cerr << "ANTLR Runtime version " << compileTimeVersion << " used for parser compilation does not match "
+    //   "the current runtime version " << runtimeVersion << std::endl;
   }
 }
 

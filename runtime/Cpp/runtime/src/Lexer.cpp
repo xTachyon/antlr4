@@ -115,7 +115,7 @@ void Lexer::setMode(size_t m) {
 
 void Lexer::pushMode(size_t m) {
 #if DEBUG_LEXER == 1
-    std::cout << "pushMode " << m << std::endl;
+    // std::cout << "pushMode " << m << std::endl;
 #endif
 
   modeStack.push_back(mode);
@@ -127,7 +127,7 @@ size_t Lexer::popMode() {
     throw EmptyStackException();
   }
 #if DEBUG_LEXER == 1
-    std::cout << std::string("popMode back to ") << modeStack.back() << std::endl;
+    // std::cout << std::string("popMode back to ") << modeStack.back() << std::endl;
 #endif
 
   setMode(modeStack.back());
