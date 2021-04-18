@@ -7,6 +7,9 @@
 
 #include "antlr4-common.h"
 
+#ifndef USE_UTF8_INSTEAD_OF_CODECVT
+# define USE_UTF8_INSTEAD_OF_CODECVT
+#endif
 #ifdef USE_UTF8_INSTEAD_OF_CODECVT
 #include "utf8.h"
 #endif
